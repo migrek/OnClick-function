@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-pagination {
+    padding: 10px;
+    background-color: coral;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.item-pagination:hover {
+    background-color: chocolate;
+} 
+
+.slider-wrapper {
+    position: relative;
+}
+.slide-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+.active-tab {
+    background-color:crimson;
+}
+.active {
+    visibility: visible;
+}
+
