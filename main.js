@@ -1,27 +1,15 @@
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready(){
-    let tab = document.getElementsByClassName('item-pagination');
-    let  tablist = document.getElementsByClassName('pagination');
-
+    var  tab = document.querySelector('.pagination');
+    var tabList = document.querySelectorAll('.item-pagination');
+    var imgList = document.querySelectorAll('.slide-item');
     tab.addEventListener('click', function(e) {
-        e.classList.add('active-tab');
+        var curTab =  [...tabList].indexOf(e.target);
+            for (var i = 0; i < tabList.length; i++) {
+                tabList[i].classList.remove('active-tab');
+                imgList[i].classList.remove('active');}
+            tabList[curTab].classList.add('active-tab');
+            imgList[curTab].classList.add('active');
 });
 }
-
-/*for (var i = 0; i < tab.length; i++) {
-    tab[i].addEventListener('click', function(event) {
-        event.classList.add('active-tab');
-    });
-}*/
-
-
-/*var tab = document.getElementsByClassName('item-pagination');
-var  tablist = document.getElementsByClassName('pagination');
-
-tab.addEventListener('click', addClass());
-
-function addClass(e) {
-    e.target.classList.add('active-tab');
-};*/
-//s[... tablist].indexOf
